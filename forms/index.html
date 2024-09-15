@@ -42,20 +42,12 @@
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-      <span>
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">Adoro</h1>
       </a>
 
-      <div class="social-links mt-3 text-center">
-          <a href="https://scholar.google.com/citations?hl=en&user=06Wt6BQAAAAJ" target="_blank" class="GoogleScholar"><i class="bi bi-google"></i></a>
-          <a href="https://drive.google.com/file/d/101Q4eeXIJKqZtWFxaojWHObR8_0plMN_/view?usp=sharing" target="_blank" class="CV"><i class="bi bi-file-earmark-person-fill"></i></a>
-          <a href="http://github.com/varunsly" target="_blank" class="Github"><i class="bi bi-github"></i></a>
-          <a href="https://linkedin.com/in/varun-magotra/" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      </div>
-      </span>
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Home<br></a></li>
@@ -68,55 +60,42 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-<!-- 
       <div class="theme-toggle-container">
-      <input type="checkbox" id="theme-toggle" class="theme-toggle">
-      <label for="theme-toggle" class="theme-toggle-label">
-          <span class="theme-toggle-light"><i class="bi bi-sun-fill"></i></span>
-          <span class="theme-toggle-dark"><i class="bi bi-moon-fill"></i></span>
-      </label>
-    </div>
- -->
-
- <!-- Theme Toggle Container -->
-<div class="theme-toggle-container">
-  <input type="checkbox" id="darkModeToggle" class="theme-toggle">
-  <label for="darkModeToggle" class="theme-toggle-label">
-    <span class="theme-toggle-light"><i class="bi bi-sun-fill"></i></span>
-    <span class="theme-toggle-dark"><i class="bi bi-moon-fill"></i></span>
-  </label>
+    <input type="checkbox" id="theme-toggle" class="theme-toggle">
+    <label for="theme-toggle" class="theme-toggle-label">
+        <span class="theme-toggle-light"><i class="bi bi-sun"></i></span>
+        <span class="theme-toggle-dark"><i class="bi bi-moon-stars"></i></span>
+    </label>
 </div>
+
+      <!-- <div class="toggle-container">
+    <span class="toggle-label">Dark</span>
+    <label class="switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider round"></span>
+    </label>
+    <span class="toggle-label">Light</span>
+</div> -->
 
 
 <script src="assets/js/main.js"></script>
 
 <!-- Your Custom JS for Theme Toggle -->
 <script>
-document.addEventListener('DOMContentLoaded', (event) => {
-  const darkModeToggle = document.getElementById('darkModeToggle');
-  const body = document.body;
-  const iconLight = document.querySelector('.theme-toggle-light i');
-  const iconDark = document.querySelector('.theme-toggle-dark i');
+    const toggleSwitch = document.getElementById('theme-toggle');
 
-  // Check for saved theme preference or default to light mode
-  const currentTheme = localStorage.getItem('theme');
-  if (currentTheme === 'dark') {
-    body.classList.add('dark-mode');
-    darkModeToggle.checked = true;
-  }
+    toggleSwitch.addEventListener('change', () => {
+        document.body.classList.toggle('dark-mode');
+        // Optionally, save the user's preference in local storage
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
 
-  // Toggle dark mode
-  darkModeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    
-    if (body.classList.contains('dark-mode')) {
-      localStorage.setItem('theme', 'dark');
-    } else {
-      localStorage.setItem('theme', 'light');
+    // Load the saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.body.classList.add(savedTheme);
+        toggleSwitch.checked = savedTheme === 'dark';
     }
-  });
-});
-
 </script>
 
     </div>
@@ -129,7 +108,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
       <img src="assets/img/hero-img.jpg" alt="" data-aos="fade-in">
 
-      <div id="intro" class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
+      <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
         <h2>I am Varun Magotra</h2>
         <p><span class="typed" data-typed-items="Research Enthusiast, Developer, Machine Learning Engineer"></span></p>
       </div>
@@ -614,7 +593,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
               <h4>Master of Science in Computer Science</h4>
               <h5>2023 - Present</h5>
               <p><em>University of Maryland, Baltimore County, MD</em></p>
-              <p>Courses: Advanced Operating Systems, Machine Learning, Computer Vision, Deep Learning, Design and Analysis of Algorithms, Interactive Fiction and Text Generation.</p>
+              <p>Courses: Advanced Operating Systems, Machine Learning, Computer Vision, Deep Learning</p>
             </div>
             <div class="resume-item">
               <h4>Bachelor of Technology in Computer Engineering</h4>
@@ -628,7 +607,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
               <h5>Aug, 2023 - Present</h5>
               <p><em>University of Maryland, Baltimore County, MD </em></p>
               <ul>
-                <li>Assisted "CMSC 691: Introduction to Data Science" course for 50 graduate students, improving average class performance by 15%.</li>
+                <li>Assisting "CMSC 691: Introduction to Data Science" course, a class of 52 graduate students.</li>
                 <li>Crafting assignments, coursework as well as facilitated grading, office hours, and doubt-clearing sessions. </li>
               </ul>
             </div>
@@ -665,8 +644,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
               <h5>Jul, 2022 - Jul,2023</h5>
               <p><em>ZIGRAM, India</em></p>
               <ul>
-                <li>Spearheaded development of Automated Bug Detection system, slashing bug resolution time by 60% and improving overall software quality.</li>
-                <li>Enhanced efficiency by parallelizing the data extraction pipeline, resulting in a 50% reduction in execution time.</li>
+                <li>Spearheaded the development and implementation of an Automated Bug Detection system.</li>
+                <li>Reduced bug resolution time by 60% which allowed the users to proactively identify and resolve software issues.</li>
                 <li>Achieved 30% improvement in the Data Summarization output by using the semantic summarization algorithms.</li>
                 <li>Created real-time Data Translation and Query Search Expansion API for seamless data translation and augmentation.</li>
               </ul>
@@ -677,9 +656,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
               <h5>Jan, 2022 - Jul, 2022</h5>
               <p><em>ZIGRAM, India</em></p>
               <ul>
-                <li>Architected a custom Entity Tagging Algorithm, categorizing extensive organizational data with 95% accuracy.</li>
-                <li>ECreated a data translation script with an accuracy of 80% to translate the data into 21 different languages, coupled with a semantic score for each translation for validation.</li>
-                <li>Developed and enhanced geopolitical dashboard, integrating 10+ key research parameters for comprehensive analysis.</li>
+                <li>Designed a custom Entity Tagging Algorithm to categorize extensive organizational data based on relational criteria.</li>
+                <li>Enhanced database keyword search capabilities through data augmentation using various NLP techniques.</li>
+                <li>Developed and improved a geo-political dashboard, integrating researched parameters for analysis.</li>
               </ul>
             </div>
 
@@ -688,10 +667,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
               <h5>May, 2021 - Oct, 2021</h5>
               <p><em>Université du Québec à Trois-Rivières, Québec, Canada</em></p>
               <ul>
-                <li>Improved the proprietary algorithm’s effectiveness in identifying diatom edges by 15%, leveraging canny edge detection, 
-                  the Prewitt operator, and BDCN.</li>
-                <li>Devised an algorithm for detecting diatoms’ internal structures, 
-                  achieving 90% precision using the Prewitt operator for edge detection and Otsu Binarization for image segmentation.</li>
+                <li>Improved the proprietary algorithm's effectiveness in identifying diatom edges by 15%, leveraging canny edgefile
+                  detection, the Prewitt operator, and BDCN.</li>
+                <li>Developed an algorithm for detecting diatoms' internal structures, using the Prewitt operator for edge detection and
+                  Otsu Binarization for image segmentation.</li>
                 
               </ul>
             </div>
@@ -863,69 +842,43 @@ document.addEventListener('DOMContentLoaded', (event) => {
       <div class="container">
 
         <div class="row gy-4">
-          <div class="row gy-4">
 
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="service-item  position-relative">
-                <div class="icon">
-                  <i class="bi bi-activity"></i>
-                </div>
-                <a href="#" class="stretched-link">
-                  <h3>Computer Vision</h3>
-                </a>
-                <p>Focus on enabling machines to interpret and understand the visual world, by leveraging deep learning techniques to improve the accuracy and efficiency of computer vision systems.</p>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="bi bi-activity"></i>
               </div>
-            </div><!-- End Service Item -->
-  
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi bi-broadcast"></i>
-                </div>
-                <a href="#" class="stretched-link">
-                  <h3>Natural Language Processing </h3>
-                    </a>
-                    <p>Focus on utilizing natural language processing techniques in specialized domains such as the medical field, with an emphasis on optimizing large language models (LLMs) for domain-specific applications. This includes fine-tuning, quantization, and efficient deployment for real-world scenarios.</p>
-                  </div>
-            </div><!-- End Service Item -->
-  
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi bi-easel"></i>
-                </div>
-                <a href="#" class="stretched-link">
-                  <h3>Continual Learning</h3>
-                </a>
-                <p>Focus on developing methods that enable machine learning models to learn continuously from a stream of data, with a focus on avoiding catastrophic forgetting. This research aims to make AI systems more adaptable, scalable, and capable of lifelong learning across a range of tasks and domains.</p>
+              <a href="#" class="stretched-link">
+                <h3>Computer Vision</h3>
+              </a>
+              <p>Focus on enabling machines to interpret and understand the visual world, by leveraging deep learning techniques to improve the accuracy and efficiency of computer vision systems.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-broadcast"></i>
               </div>
-            </div><!-- End Service Item -->
-  
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi bi-bounding-box-circles"></i>
-                </div>
-                <a href="#" class="stretched-link">
-                  <h3>Data Analytics and Big Data</h3>
-                </a>
-                <p>Focus on extracting insights from large and complex datasets to predict trends, and bolster strategic decision-making.</p>
+              <a href="#" class="stretched-link">
+                <h3>Data Analytics and Big Data</h3>
+              </a>
+              <p>Focus on extracting insights from large and complex datasets to predict trends, and bolster strategic decision-making.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-easel"></i>
               </div>
-            </div><!-- End Service Item -->
-  
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="bi bi-calendar4-week"></i>
-                </div>
-                <a href="#" class="stretched-link">
-                  <h3>Algorithm Optimization</h3>
-                </a>
-                <p>Focus on optimizing algorithms for faster computation, better resource management, and scalability in various applications such as data processing, simulation, and operational research.</p>
-              </div>
-              </div>
-            </div><!-- End Service Item -->
-  
+              <a href="#" class="stretched-link">
+                <h3>Algorithm Optimization</h3>
+              </a>
+              <p>Focus on optimizing algorithms for faster computation, better resource management, and scalability in various applications such as data processing, simulation, and operational research.</p>
+            </div>
+          </div><!-- End Service Item -->
+
           
 
         </div>
@@ -943,14 +896,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     <div class="container">
       <div class="copyright text-center ">
-        <!-- <p>© <span>Copyright</span> <strong class="px-1 sitename">DevFolio</strong> <span>All Rights Reserved</span></p> -->
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">DevFolio</strong> <span>All Rights Reserved</span></p>
       </div>
-      <!-- <div class="social-links d-flex justify-content-center">
+      <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
         <a href=""><i class="bi bi-facebook"></i></a>
         <a href=""><i class="bi bi-instagram"></i></a>
         <a href=""><i class="bi bi-linkedin"></i></a>
-      </div> -->
+      </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
@@ -962,7 +915,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   </footer>
 
-  Scroll Top
+  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
