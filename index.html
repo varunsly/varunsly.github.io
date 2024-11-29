@@ -716,152 +716,130 @@ document.addEventListener('DOMContentLoaded', (event) => {
     
     
 
-    <!-- Portfolio Section -->
-    
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
+   <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+      </div><!-- End Section Title -->
+
       <div class="container">
 
-        <div class="section-title">
-          <h2>Projects and Publication</h2>
-          <!-- <p></p> -->
-        </div>
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">Projects</li>
-              <li data-filter=".filter-card">Publications</li>
-              <!-- <li data-filter=".filter-web">Web</li> -->
-            </ul>
-          </div>
-        </div>
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-project">Projects</li>
+            <li data-filter=".filter-publication">Publications</li>
+          </ul><!-- End Portfolio Filters -->
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-publication">
               <img src="assets/img/News.png" class="img-fluid" alt="">
-              <div class="portfolio-title" style="text-align: center; font-style: italic; font-family: Poppins sans-serif;">
-                News Bias Detection Using Transformers
+              <div class="portfolio-info">
+                <b>News Bias Detection Using Transformers</b>
+                <a href="https://link.springer.com/chapter/10.1007/978-981-19-2130-8_26" target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
-              <div class="portfolio-links">
-                <!-- <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a> -->
-                <a href="https://link.springer.com/chapter/10.1007/978-981-19-2130-8_26" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
+            </div><!-- End Portfolio Item -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card" >
-            <div class="portfolio-wrap">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-publication">
               <img src="assets/img/Malaria.png" class="img-fluid" alt="">
-              <div class="portfolio-title"  style="text-align: center;  font-style: italic; font-family: Poppins sans-serif;">
-                Malaria Diagnosis Using a Lightweight Deep Convolutional Neural Network
+              <div class="portfolio-info">
+                <b>Malaria Diagnosis Using a Lightweight Deep Convolutional Neural Network</b>
+                <a href="https://www.hindawi.com/journals/ijta/2022/4176982/" target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
-              <div class="portfolio-links">
-                <!-- <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a> -->
-                <a href="https://www.hindawi.com/journals/ijta/2022/4176982/" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
+            </div><!-- End Portfolio Item -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/Planr.png" class="img-fluid" alt="">
-              <div class="portfolio-title" style="text-align: center;">
-                Plant Disease Detection Using Deep Learning
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-publication">
+              <img src="assets/img/Planr.png"  class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <b>Plant Disease Detection Using Deep Learning</b>
+                <a href="https://ieeexplore.ieee.org/document/9417910" target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
-              <div class="portfolio-links">
-                <!-- <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a> -->
-                <a href="https://ieeexplore.ieee.org/document/9417910" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
+            </div><!-- End Portfolio Item -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-publication">
               <img src="assets/img/summarization-img.png" class="img-fluid" alt="">
-              <div class="portfolio-title" style="text-align: center; ">
-                An exploratory study of automatic text summarization in biomedical and healthcare domain
+              <div class="portfolio-info">
+                <b>An exploratory study of automatic text summarization in biomedical and healthcare domain</b>
+                <a href="https://www.sciencedirect.com/science/article/pii/S2772442522000223?via%3Dihub"  target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
-              <div class="portfolio-links">
-                <!-- <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a> -->
-                <a href="https://www.sciencedirect.com/science/article/pii/S2772442522000223?via%3Dihub"  target="_blank" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
+            </div><!-- End Portfolio Item -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-publication">
               <img src="assets/img/Compre.png" class="img-fluid" alt="">
-              <div class="portfolio-title" style="text-align: center; ">
-                Comprehensive Survey on Techniques of Topic Evolution Mining
+              <div class="portfolio-info">
+                <b>Comprehensive Survey on Techniques of Topic Evolution Mining</b>
+                <a href="https://ieeexplore.ieee.org/document/9488965"  target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
-              <div class="portfolio-links">
-                <!-- <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a> -->
-                <a href="https://ieeexplore.ieee.org/document/9488965"  target="_blank" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
+            </div><!-- End Portfolio Item -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-publication">
               <img src="assets/img/Norefrence.png" class="img-fluid" alt="">
-              <div class="portfolio-title" style="text-align: center; ">
-                An Experimental Study on No-Reference Image Quality Assessment of Image Datasets
+              <div class="portfolio-info">
+                <b>An Experimental Study on No-Reference Image Quality Assessment of Image Datasets</b>
+                <a href="https://ieeexplore.ieee.org/document/9824262"  target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
-              <div class="portfolio-links">
-                <!-- <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a> -->
-                <a href="https://ieeexplore.ieee.org/document/9824262"  target="_blank" title="More Details"><i class="bx bx-link"></i></a>
+            </div><!-- End Portfolio Item -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-project">
+              <img src="assets/img/reddit.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <b>SubReddit Recommendation System </b>
+                <a href="https://github.com/varunsly/SubReddit-Recommendation-System" target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
-            </div>
-          </div>
+            </div><!-- End Portfolio Item -->
+            
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-project">
+              <img src="assets/img/dis.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <b>Distributed File System  </b>
+                <a href="https://github.com/varunsly/Distributed-File-System" target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+            
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-project">
+              <img src="assets/img/if.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <b>Interactive Fiction Analysis Using LLM  </b>
+                <a href="https://github.com/varunsly/Interactive-Fiction-Analysis" target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-project">
               <img src="assets/img/senti.png" class="img-fluid" alt="">
-              <div class="portfolio-title" style="text-align: center; ">
-                Sentiment Analysis  of IMDB Movie Reviews
+              <div class="portfolio-info">
+                <b>Sentiment Analysis of IMDB Movie Reviews</b>
+                <a href="https://github.com/varunsly/Sentiment_Analysis-Movie-Review" target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
-              <div class="portfolio-links">
-                <!-- <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a> -->
-                <a href="https://github.com/varunsly/Sentiment_Analysis-Movie-Review" target="_blank" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
+            </div><!-- End Portfolio Item -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-project">
               <img src="assets/img/auto.jpeg" class="img-fluid" alt="">
-              <div class="portfolio-title" style="text-align: center; ">
-                Denoising Images Using Vanilla Autoencoder
+              <div class="portfolio-info">
+                <b>Denoising Images Using Vanilla Autoencoder </b>
+                <a href="https://github.com/varunsly/Denoising-Images-Using-Autoencoder" target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
-              <div class="portfolio-links">
-                <!-- <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a> -->
-                <a href="https://github.com/varunsly/Denoising-Images-Using-Autoencoder"  target="_blank" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
+            </div><!-- End Portfolio Item -->
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-project">
               <img src="assets/img/fake.png" class="img-fluid" alt="">
-              <div class="portfolio-title" style="text-align: center; ">
-                Fake Face Generator using GAN 
+              <div class="portfolio-info">
+                <b>Fake Face Generator using GAN </b>
+                <a href="https://github.com/varunsly/Fake_Face_Generator" target="_blank" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
-              <div class="portfolio-links">
-                <!-- <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a> -->
-                <a href="https://github.com/varunsly/Fake_Face_Generator "  target="_blank" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
+            </div><!-- End Portfolio Item -->
+
+          </div><!-- End Portfolio Container -->
 
         </div>
 
       </div>
-    </section><!-- End Portfolio Section -->
+
+    </section><!-- /Portfolio Section -->
+    
 
     <!-- Services Section -->
     <section id="research_interest" class="services section">
@@ -974,7 +952,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   </footer>
 
-  Scroll Top
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
